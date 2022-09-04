@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Assigment 1</title>
+    <title>Assigment 2</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
 </head>
+
 <body>
 
-    <nav class="navi" style="justify-content: center;">
+    <nav class="navi" style="justify-content: left;">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Product</a></li>
@@ -18,14 +23,38 @@
         </ul>
     </nav>
     <style type="text/css">
-        a{text-decoration: none; font-size: 20px;font-family: sans-serif;padding: 14px 10px}
-        ul{padding: 14px;}
-        li{list-style: none; display: inline;}
-        li a{background: #222; color:#d4d4d4;}
-        li a:hover{background: #4da4ff; color:#fff;}
-        .navi{background: #222; height: 50px;}
+        a {
+            text-decoration: none;
+            font-size: 20px;
+            font-family: sans-serif;
+            padding: 14px 10px
+        }
 
-        button{
+        ul {
+            padding: 14px;
+        }
+
+        li {
+            list-style: none;
+            display: inline;
+        }
+
+        li a {
+            background: #222;
+            color: #d4d4d4;
+        }
+
+        li a:hover {
+            background: #4da4ff;
+            color: #fff;
+        }
+
+        .navi {
+            background: #222;
+            height: 50px;
+        }
+
+        button {
             margin-top: 1rem;
             font-size: 15px;
             color: darkblue;
@@ -36,71 +65,108 @@
             margin-top: 10px;
         }
 
-        .button-1{
+        .button-1 {
             width: 100%;
 
         }
 
+        #form-nama {
+            display: none;
+        }
+
+        #input-usia {
+            width: 92%;
+        }
+
+        .mt-2 {
+            padding-top: 0%;
+
+        }
+
+        .container-1 {
+            display: flex;
+            flex-direction: row;
+        }
     </style>
 
     <header>
-        <div class="container clearfix">
-                <div class="sidebar">
-                    <img src="D:\HACKTIVE LATIHAN\Assigment 1\img\ilham.jpg">
+        <div class="container clearfix" style="justify-content: start;">
+            <div class="sidebar">
+                <img src="img\ilham.jpg">
+            </div>
+            <div class="content">
+                <h1 id="text-nama">
+                    Ilham Jhonas Pratama
+                </h1>
+                <h2 id="text-role">UX Designer</h2>
+
+                <div class="button">
+                    <button id="edit-button">Edit</button>
+                    <button disabled>Resume</button>
                 </div>
-                <div class="content">
-                    <h1>
-                        Ilham Jhonas Pratama
-                    </h1>
-                    <h2>UX Designer</h2>
-
-                    <div class="button">
-                        <button>Kontak</button>
-                        <button disabled>Resume</button>
+                <div class="mt-2">
+                    <div class="container-1">
+                        <p>Availability :</p>
+                        <p id="text-availability"> Full Time</p>
                     </div>
-                    <div class="mt-2" >
-                            <strong>Availability : Full Time</strong><br>
-                            <strong>Usia : 21 tahun</strong><br>
-                            <strong>Lokasi : Pekanbaru, Riau</strong><br>
-                            <strong>Pengalaman : 4</strong><br>
-                            <strong>Email : @ilhamjhilham@gmail.com</strong>
+                    <div class="container-1">
+                        <p>Usia :</p>
+                        <p id="text-usia"> 21 tahun</p>
+                    </div>
+                    <div class="container-1">
+                        <p>Lokasi :</p>
+                        <p id="text-lokasi"> Pekanbaru, Riau</p>
+                    </div>
+                    <div class="container-1">
+                        <p>Years Experience :</p>
+                        <p id="text-experience"> 4</p>
+                    </div>
+                    <div class="container-1">
+                        <p>Email :</p>
+                        <p id="text-email"> @ilhamjhilham@gmail.com</p>
                     </div>
 
+                </div>
+            </div>
         </div>
     </header>
     <br>
-    <form>
+    <form id="form-nama" onsubmit="handleSubmit(event)">
         <label for="nama"><b>Nama</b></label>
         <br>
-        <input type="text" name="nama" size="160">
+        <input type="text=" name="nama" size="160" id="input-name">
         <br>
         <label for="role"><b>Role</b></label>
         <br>
-        <input type="text" name="role" size="160">
+        <input type="text" name="role" size="160" id="input-role">
         <br>
         <label for="availability"><b>Availability</b></label>
         <br>
-        <input type="text" name="availability" size="160">
+        <input type="text" name="availability" size="160" id="input-availability">
         <br>
-        <label for="age"><b>Age</b></label>
+        <label for="usia"><b>Usia</b></label>
         <br>
-        <input type="text" name="age" size="160">
+        <input type="number" name="usia" size="160" id="input-usia">
         <br>
         <label for="lokasi"><b>Lokasi</b></label>
         <br>
-        <input type="text" name="lokasi" size="160">
+        <input type="text" name="lokasi" size="160" id="input-lokasi">
         <br>
-        <label for="years"><b>Years Experience</b></label>
+        <label for="experience"><b>Years Experience</b></label>
         <br>
-        <input type="text" name="years" size="160">
+        <input type="text" name="years" size="160" id="input-experience">
         <br>
         <label for="email"><b>Email</b></label>
         <br>
-        <input type="text" name="email" size="160">
+        <input type="text" name="email" size="160" id="input-email">
         <br>
-    </form>
         <div class="button-1">
-                <button><b>Submit</b></button>
+            <button type="submit" id="btn-submit"><b>Submit</b></button>
         </div>
+    </form>
+
+
+    <script src="js/index.js"></script>
 </body>
+
 </html>

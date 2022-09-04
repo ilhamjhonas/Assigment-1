@@ -1,43 +1,43 @@
-body{
+body {
     line-height: 1.5;
     margin: 0;
 }
 
-h1{
+h1 {
     margin: 0;
 }
 
-h2{
+h2 {
     background-color: #212530;
     display: inline-block;
 }
 
-header{
+header {
     background-color: #171b26;
     color: white;
 }
 
-main{
+main {
     background-color: white;
 }
 
-.container{
+.container {
     width: 1200px;
     margin: 0 auto;
 }
 
-.sidebar{
+.sidebar {
     width: 300px;
     background-color: #212530;
     padding: 10px 0;
     float: left;
 }
 
-.sidebar img{
+.sidebar img {
     width: 100%;
 }
 
-.content{
+.content {
     float: left;
     width: 500px;
     padding: 50px 50px;
@@ -45,30 +45,36 @@ main{
 
 }
 
-.clearfix{
+.clearfix {
     content: "";
     clear: both;
     display: table;
 }
 
-.button{
+.button {
     margin-top: 3rem;
     size: b5;
 }
- .mt-2{
+
+.mt-2 {
     margin-left: 100%;
     float: top;
     width: 400px;
     padding: 0px 0px;
     box-sizing: border-box;
- }
+    text-align: left;
+
+
+}
+
 form {
     display: block;
     margin-top: 0rem;
     padding-left: 3rem;
     margin: 1rem;
- }
-.button-1{
+}
+
+.button-1 {
     padding-left: 3rem;
     margin: 1rem;
 }
@@ -84,4 +90,3 @@ form {
     cursor: pointer;
     border: none;
 }
-
